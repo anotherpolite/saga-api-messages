@@ -2,7 +2,7 @@
   "name": "saga-api-messages",
   "version": "1.0.0",
   "description": "API for messages from saga web page",
-  "main": "app.js",
+  "main": "/app.js",
   "scripts": {
     "start": "node app.js"
   },
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/anotherpolite/saga-api-messages.git"
   },
-  "author": "",
+  "author": "JoaquinV",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/anotherpolite/saga-api-messages/issues"
