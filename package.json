@@ -4,8 +4,10 @@
   "description": "API for messages from saga web page",
   "main": "/app/server.js",
   "scripts": {
-    "start": "node app/server.js"
+    "start": "node app/server.js",
+    "build": "node app/server.js"
   },
+  "heroku-run-build-script": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anotherpolite/saga-api-messages.git"
