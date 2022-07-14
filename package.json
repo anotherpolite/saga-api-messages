@@ -4,7 +4,7 @@
   "description": "API for messages from saga web page",
   "main": "/app/server.js",
   "scripts": {
-    "dev": "node app/server.js"
+    "start": "node app/server.js"
   },
   "repository": {
     "type": "git",
