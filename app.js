@@ -55,10 +55,10 @@ var express = require('express'),
         return res.sendStatus(statusCode);
       });
 
-        app.get("/", (req, res) => {
-          res.send("Server on");
-        });
+    app.get("/", (req, res) => {
+      res.send("Server on");
+    });
 
-          app.listen(port, function(){
-            console.log('Server is running at port: ',port);
-          });
+    app.listen(port, function(){
+      console.log('Server is running at port: ',port);
+    });
