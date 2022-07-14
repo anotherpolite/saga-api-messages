@@ -7,7 +7,6 @@
     "start": "node app/server.js",
     "build": "node app/server.js"
   },
-  "heroku-run-build-script": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anotherpolite/saga-api-messages.git"
