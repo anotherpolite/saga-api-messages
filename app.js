@@ -7,10 +7,8 @@ var express = require('express'),
     var emailPassword = "uliqlcqkoaibeqrh";
 
     var app = express();
-    app.use(express.static('public'));
-    app.use(bodyParser.urlencoded({extended: true}));
-    app.use(bodyParser.json());
-    var port = process.env.PORT || 3001;
+    app.use(express.static(path.join(__dirname, 'public')));
+    var port = process.env.PORT || 3000;
 
     app.post('/API/send-email', function (req, res) {
         let statusCode = 200;
@@ -26,7 +24,7 @@ var express = require('express'),
           } 
       });
 
-      let mailOptions = {
+      let mailOptions = { 
           from: `${emailUser}`, // sender address
           to: 'joaquinvillanuevafarber@gmail.com', // list of receivers
           subject: `New email from - ${req.body.email}`, // Subject line

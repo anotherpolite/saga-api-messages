@@ -2,7 +2,7 @@
   "name": "saga-api-messages",
   "version": "1.0.0",
   "description": "API for messages from saga web page",
-  "main": "/app/server.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
