@@ -10,7 +10,7 @@ var express = require('express'),
     app.use(express.static('public'));
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(bodyParser.json());
-    var port = process.env.PORT || 80;
+    var port = process.env.PORT || 3001;
 
     app.post('/API/send-email', function (req, res) {
         let statusCode = 200;
