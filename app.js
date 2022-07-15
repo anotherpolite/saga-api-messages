@@ -13,7 +13,7 @@ var express = require('express'),
     app.post('/API/send-email', function (req, res) {
         let statusCode = 200;
 
-      let transporter = nodeMailer.createTransport({
+      let    = nodeMailer.createTransport({
           service: 'gmail',
           host: 'smtp.gmail.com',
           port: 465,
