@@ -1,16 +1,17 @@
 var express = require('express'),
-    path = require('path'),
-    nodeMailer = require('nodemailer'),
-    bodyParser = require('body-parser');
+path = require('path'),
+nodeMailer = require('nodemailer'),
+bodyParser = require('body-parser');
 
-    var emailUser = "saga.mensajes@gmail.com";
-    var emailPassword = "uliqlcqkoaibeqrh";
+var emailUser = "saga.mensajes@gmail.com";
+var emailPassword = "uliqlcqkoaibeqrh";
 
     var app = express();
     var port = process.env.PORT || 3001;
+    app.use(bodyParser.urlencoded({extended: true}));
+    app.use(bodyParser.json());
 
     app.post('/', function (req, res) {
-        let statusCode = 200;
 
       let transporter = nodeMailer.createTransport({
           service: 'gmail',
@@ -36,20 +37,17 @@ var express = require('express'),
           <p>${req.body.messageBody}</p>` // html body
       };
 
-      transporter.sendMail(mailOptions, (error, info, res) => {
+      transporter.sendMail(mailOptions, (error, info) => {
           if (error) {
-                statusCode = 404;
-              return console.log(error);
+              return res.status(400).send({ msj: error});
           }
           console.log('Message %s sent: %s', info.messageId, info.response);
 
           if (info.response.includes("OK")){
-              statusCode = 200      
-              var messageDone = "Mensaje enviado con exito.";       
-              return console.log(messageDone);
+            console.log("Mensaje enviado con exito."); 
+            return res.sendStatus(200);
           }
         });
-        return res.sendStatus(statusCode);
       });
 
     app.listen(port, function(){
