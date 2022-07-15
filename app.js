@@ -8,12 +8,12 @@ var express = require('express'),
 
     var app = express();
     app.use(express.static(path.join(__dirname, 'public')));
-    var port = process.env.PORT || 3000;
+    var port = process.env.PORT || 3001;
 
     app.post('/API/send-email', function (req, res) {
         let statusCode = 200;
 
-      let    = nodeMailer.createTransport({
+      let transporter = nodeMailer.createTransport({
           service: 'gmail',
           host: 'smtp.gmail.com',
           port: 465,
