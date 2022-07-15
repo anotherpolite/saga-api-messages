@@ -9,7 +9,7 @@ var express = require('express'),
     var app = express();
     var port = process.env.PORT || 3001;
 
-    app.post('/API/send-email', function (req, res) {
+    app.post('/', function (req, res) {
         let statusCode = 200;
 
       let transporter = nodeMailer.createTransport({
