@@ -26,7 +26,7 @@ var emailPassword = "uliqlcqkoaibeqrh";
 
       let mailOptions = { 
           from: `${emailUser}`, // sender address
-          to: 'joaquinvillanuevafarber@gmail.com', // list of receivers
+          to: 'info@sagastudio.film', // list of receivers
           subject: `New email from - ${req.body.email}`, // Subject line
           html: `<h2>Nuevo mensaje de: ${req.body.name}</h2>
           </br>
