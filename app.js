@@ -7,7 +7,6 @@ var express = require('express'),
     var emailPassword = "uliqlcqkoaibeqrh";
 
     var app = express();
-    app.use(express.static(path.join(__dirname, 'public')));
     var port = process.env.PORT || 3001;
 
     app.post('/API/send-email', function (req, res) {
@@ -52,10 +51,6 @@ var express = require('express'),
         });
         return res.sendStatus(statusCode);
       });
-
-    app.get("/", (req, res) => {
-      res.send("Server on");
-    });
 
     app.listen(port, function(){
       console.log('Server is running at port: ',port);
